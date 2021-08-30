@@ -1,8 +1,11 @@
+// Node Modules
+
 const axios = require("axios");
 const url = "https://www.section.io/engineering-education/index.xml";
 const xml2js = require("xml2js");
 const parser = new xml2js.Parser({ attrkey: "ATTR" });
 
+// Get Section RSS Feed
 axios
     .get(url)
     .then((res) => res.data)
@@ -10,9 +13,15 @@ axios
         console.error(err);
     })
     .then(function (res) {
-        res = new window.DOMParser().parseFromString(res, "text/xml");
-        console.log(res);
-        const titles = res.querySelectorAll("title").forEach((title) => {
-            console.log(title);
+        // Parse XML
+        parser.parseString(res, function (err, result) {
+            if (!err) {
+                const feed = result.rss.channel;
+                // Convert to JSON
+                JSON.stringify(feed);
+                console.info(feed[0].item);
+            } else {
+                console.error(err);
+            }
         });
     });
