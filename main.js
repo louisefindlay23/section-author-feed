@@ -16,10 +16,11 @@ axios
         // Parse XML
         parser.parseString(res, function (err, result) {
             if (!err) {
-                const feed = result.rss.channel;
                 // Convert to JSON
-                JSON.stringify(feed);
-                console.info(feed[0].item);
+                let feed = JSON.stringify(result.rss.channel);
+                feed = JSON.parse(feed);
+                const posts = feed[0].item;
+                console.info(posts);
             } else {
                 console.error(err);
             }
