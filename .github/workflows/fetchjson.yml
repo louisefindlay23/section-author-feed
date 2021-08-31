@@ -7,6 +7,12 @@ on:
 jobs:
   fetchjson:
     runs-on: ubuntu-latest
-    name: Fetch JSON
     steps:
-      - run: curl http://section-author-feeds.louisefindlay.com/feed/all -o feed.json
+    - name: Fetch JSON
+      run: curl http://section-author-feeds.louisefindlay.com/feed/all -o feed.json
+    
+    - name: Upload File
+      uses: actions/upload-artifact@v2
+      with:
+        name: section-feed
+        path: feed.json
