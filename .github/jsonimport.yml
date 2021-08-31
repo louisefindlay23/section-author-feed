@@ -1,0 +1,14 @@
+jobs:
+  table:
+    runs-on: ubuntu-latest
+    name: Update README from json data
+    steps:
+    - uses: actions/checkout@v2
+    - name: Read/Write data into README
+      uses: eddiejaoude/github-actions-reader-writer@v0.1
+      with:
+        json-file-path: 'http://section-author-feeds.louisefindlay.com/feed/all'
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        columns: 3
+        object-field-names: '[ "title", "link", "pubDate", "guid", "description" ]'
+        html-cell: '<td align="center"><p>Title</p></td>'
