@@ -27,4 +27,4 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         columns: 3
         object-field-names: '[ "title", "link", "pubDate", "guid", "description" ]'
-        html-cell: '<td align="center"><p><a href="{{ link }}">{{ title }}</a></p></td><td align="left"><p>{{ description}}</p>'
+        html-cell: '<td align="center"><p><a href="{{ link }}">{{ title }}</a></p><p align="left">{{ description }}</p></td>'
