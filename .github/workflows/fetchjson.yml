@@ -6,5 +6,7 @@ on:
 
 jobs:
   fetchjson:
+    runs-on: ubuntu-latest
     name: Fetch JSON
-    run: curl http://section-author-feeds.louisefindlay.com/feed/all -o feed.json
+    steps:
+      - run: curl http://section-author-feeds.louisefindlay.com/feed/all -o feed.json
