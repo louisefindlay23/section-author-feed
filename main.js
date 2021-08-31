@@ -6,20 +6,24 @@ const parser = new xml2js.Parser({ attrkey: "ATTR" });
 const fs = require("fs");
 const express = require("express");
 const ejs = require("ejs");
+const bodyParser = require("body-parser");
 const app = express();
 const port = 3000;
 
 // Initialise Express
 app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.set("view engine", "ejs");
 app.listen(port);
 console.info("Listening on " + port);
 
-// Pages
+// Index
 app.get("/", function (req, res) {
     res.render("../pages/index");
 });
 
+// Section Feed
 app.get("/feed/all", function (req, res) {
     // Get Section RSS Feed
     axios
@@ -50,4 +54,22 @@ app.get("/feed/all", function (req, res) {
         });
 });
 
-// Function getFeed
+// Get Author Name and Redirect to Author Feed
+app.post("/feed/author", function (req, res) {
+    let author = req.body.author;
+    if (!author) {
+        res.redirect("/");
+    }
+    author = author.replace(/\s+/g, "-").toLowerCase();
+    res.redirect("/feed/author/" + author);
+});
+
+// Get Feed and Generate Author Feed
+app.get("/feed/author/:author", function (req, res) {
+    res.send(req.params.author);
+});
+
+// 404 Route
+app.use(function (req, res) {
+    res.redirect("/");
+});

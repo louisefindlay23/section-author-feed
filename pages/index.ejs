@@ -2,20 +2,33 @@
 <html lang="en">
     <head>
         <title>Section EngEd RSS Feed Generator</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
 
     <body>
-        <header>
-            <h1>Section EngEd RSS Feed Generator</h1>
-        </header>
+        <div id="content-wrap">
+            <header class="section">
+                <h1 class="title">Section EngEd RSS Feed Generator</h1>
+            </header>
 
-        <main class="flex-center no-bottom">
-            <h2>Welcome to the Section EngEd RSS Feed Generator</h2>
-            <p>Go to xyz to generate your feed</p>
-        </main>
+            <main class="section">
+                <div class="container">
+                    <h2 class="subtitle">Welcome to the Section EngEd Feed Generator</h2>
+                    <p>Choose from the following options below to generate your JSON feed.</p>
+                    <a class="button is-link" href="/feed/all"> All Articles </a>
+                    <form action="/feed/author" method="post">
+                        <label class="label" for="author">Author Name:</label>
+                        <input class="input" type="text" name="author" />
+                        <button class="button is-success" type="submit">Submit</a>
+                    </form>
+                </div>
+            </main>
+        </div>
 
-        <footer>
-            <p>Copyright 2021 Louise Findlay</p>
+        <footer class="section">
+            <p>© 2021 Louise Findlay</p>
         </footer>
     </body>
 </html>
