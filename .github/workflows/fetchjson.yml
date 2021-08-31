@@ -16,3 +16,13 @@ jobs:
       with:
         name: section-feed
         path: feed.json
+
+    - uses: actions/checkout@v2
+    - name: Read/Write data into README
+      uses: eddiejaoude/github-actions-reader-writer@v0.1
+      with:
+        json-file-path: 'feed.json'
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        columns: 3
+        object-field-names: '[ "title", "link", "pubDate", "guide", "description" ]'
+        html-cell: '<td align="center"><p>{{ title }}</p></td>'

@@ -1,2 +1,0 @@
-- name: json2table
-  uses: EddieHubCommunity/gh-actions-html-table-generator@v0.1.1
