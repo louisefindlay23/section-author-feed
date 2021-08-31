@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: Fetch JSON
       run: |
-        curl http://section-author-feeds.louisefindlay.com/feed/all -o feed.json
+        curl https://section-author-feeds.louisefindlay.com/feed/all -o feed.json
         pwd
         ls -l
     
