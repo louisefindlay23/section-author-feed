@@ -9,10 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Fetch JSON
-      run: curl http://section-author-feeds.louisefindlay.com/feed/all -o feed.json
-
-    - name: List Directory
-      run: ls -l
+      run: |
+        curl http://section-author-feeds.louisefindlay.com/feed/all -o feed.json
+        ls -l
     
     - name: Upload File
       uses: actions/upload-artifact@v2
