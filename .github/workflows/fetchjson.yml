@@ -26,5 +26,5 @@ jobs:
         json-file-path: 'feed.json'
         github-token: ${{ secrets.GITHUB_TOKEN }}
         columns: 3
-        object-field-names: '[ "title", "link", "pubDate", "guide", "description" ]'
-        html-cell: '<td align="center"><p>{{ title }}</p></td>'
+        object-field-names: '[ "title", "link", "pubDate", "guid", "description" ]'
+        html-cell: '<td align="center"><p><a href="{{ link }}">{{ title }}</a></p></td><td align="left"><p>{{ description}}</p>'
