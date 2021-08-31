@@ -10,6 +10,7 @@ jobs:
     steps:
     - name: Fetch JSON
       run: curl http://section-author-feeds.louisefindlay.com/feed/all -o feed.json
+      run: ls -l
     
     - name: Upload File
       uses: actions/upload-artifact@v2
