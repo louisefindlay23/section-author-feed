@@ -22,7 +22,6 @@ jobs:
 
     - name: Read/Write data into README
       uses: eddiejaoude/github-actions-reader-writer@v0.1
-      needs: fetchjson
       with:
         json-file-path: 'feed.json'
         github-token: ${{ secrets.GITHUB_TOKEN }}
