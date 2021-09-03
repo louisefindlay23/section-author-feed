@@ -51,6 +51,12 @@ See below for the range of technologies used to build both the web app and GitHu
 
 # 👀 Demo
 
+<div align="center">
+  <a href="https://section-author-feeds.louisefindlay.com">
+    <img src="https://user-images.githubusercontent.com/26024131/132042263-3abc447c-21d1-4362-b710-7c6cb5e8f528.png" alt="Section Author Feed Web App Screenshot">
+  </a>
+</div>
+
 See the feed below as an example of what Section Author Feed can do. Currently this is an example of showing every article.
 
 <!--START_SECTION:data-section-->
