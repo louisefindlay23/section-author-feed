@@ -21,11 +21,11 @@ Looking to generate an author feed for your Section.io Engineering Education art
 
 # 🎯 Features
 
-- **Web App** - Looking for an easy way to create your own author feed? Use the [web app](https://section-author-feeds.louisefindlay.com/) and enter your name to discover your URL and JSON file containing all the articles you've written. - **In Progress - currently /feed/all is available**
+- **Web App** - Looking for an easy way to create your own author feed? Use the [web app](https://section-author-feeds.louisefindlay.com/) and enter your name to discover your URL and JSON file containing all the articles you've written.
 
-- **API** - Desire programmability and prefer the command line? Just call the API: `https://section-author-feeds.louisefindlay.com/feed/author/[author-name]` - **In Progress - currently /feed/all is available**
+- **API** - Desire programmability and prefer the command line? Just call the API: `https://section-author-feeds.louisefindlay.com/feed/author/[author-name]`
 
-- **GitHub Action** - Use the [GitHub Action](https://github.com/louisefindlay23/section-author-feed/blob/master/.github/workflows/fetchjson.yml) to embed the feed in your GitHub Readme. Updates hourly.
+- **GitHub Action** - Use the [GitHub Action](https://github.com/louisefindlay23/section-author-feed/blob/master/.github/workflows/fetchjson.yml) and then add `<!--START_SECTION:data-section-->` and `<!--START_SECTION:data-section-->` to your Readme to embed the feed in your GitHub Readme. Updates hourly.
 
 # 💡 Why I Built Section Author Feed
 
