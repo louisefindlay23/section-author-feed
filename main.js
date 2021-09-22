@@ -66,7 +66,12 @@ app.post("/feed/author", function (req, res) {
 
 // Get Feed and Generate Author Feed
 app.get("/feed/author/:author", function (req, res) {
-    res.send(req.params.author);
+    fs.readFile("data/all.json", function (err, data) {
+        if (err) return console.error(err);
+        let feed = JSON.parse(data);
+        feed = feed.filter(post=> post.author[0] === req.params.author);
+        res.json(feed);
+    });
 });
 
 // 404 Route
