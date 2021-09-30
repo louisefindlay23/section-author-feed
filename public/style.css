@@ -25,3 +25,25 @@ footer p {
     font-weight: 600;
     text-align: center;
 }
+
+a,
+button {
+    font-weight: 600;
+}
+
+a {
+    color: #fff;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+main a {
+    color: #000;
+}
+
+main a:hover {
+    color: #000;
+}
