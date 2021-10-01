@@ -41,7 +41,6 @@ app.get("/feed/all", function (req, res) {
                     feed = JSON.parse(feed);
                     let posts = feed[0].item;
                     res.json(posts);
-                    //console.info(posts);
                     posts = JSON.stringify(posts);
                     fs.writeFile("data/all.json", posts, function (err) {
                         if (err) return console.error(err);
@@ -69,7 +68,7 @@ app.get("/feed/author/:author", function (req, res) {
     fs.readFile("data/all.json", function (err, data) {
         if (err) return console.error(err);
         let feed = JSON.parse(data);
-        feed = feed.filter(post=> post.author[0] === req.params.author);
+        feed = feed.filter((post) => post.author[0] === req.params.author);
         res.json(feed);
     });
 });
