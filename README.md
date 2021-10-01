@@ -67,7 +67,7 @@ See below for the range of technologies used to build both the web app and GitHu
 </div>
 
 <div align="center">
-  <a href="">
-  <img src="" alt="">
+  <a href="https://github.com/louisefindlay23">
+  <img src="https://user-images.githubusercontent.com/26024131/135601075-18d7e832-01ae-4156-80a7-18aeca3de61e.png" alt="Technical Article Readme Section">
   </a>
   </div>
