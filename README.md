@@ -55,6 +55,8 @@ See below for the range of technologies used to build both the web app and GitHu
 
 ## Action Technologies
 
+Here is the list of GitHub Actions I adapted in order to create Fetch JSON to call the API and embed the following data in a Readme.
+
 - **[Upload Artifact](https://github.com/actions/upload-artifact)** - Uploads the JSON File which has been fetched from the API as an artifact
 - **[JSON2Table](https://github.com/EddieHubCommunity/gh-actions-html-table-generator)** - Reads the JSON file, parses it and then formats the data into a HTML table which can be embedded into a GitHub readme using tags.
 
