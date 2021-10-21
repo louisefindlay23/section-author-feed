@@ -68,8 +68,6 @@ Here is the list of GitHub Actions I adapted in order to create Fetch JSON to ca
   </a>
 </div>
 
-<div align="center">
-  <a href="https://github.com/louisefindlay23">
-  <img src="https://user-images.githubusercontent.com/26024131/135601075-18d7e832-01ae-4156-80a7-18aeca3de61e.png" alt="Technical Article Readme Section">
-  </a>
-  </div>
+<!--START_SECTION:data-section-->
+
+<!--END_SECTION:data-section-->
