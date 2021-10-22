@@ -69,5 +69,4 @@ Here is the list of GitHub Actions I adapted in order to create Fetch JSON to ca
 </div>
 
 <!--START_SECTION:data-section-->
-
 <!--END_SECTION:data-section-->
