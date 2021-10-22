@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: Fetch JSON
       run: |
-        curl https://section-author-feeds.louisefindlay.com/feed/all -o feed.json
+        curl https://section-author-feeds.louisefindlay.com/feed/author/louise-findlay -o author.json
         pwd
         ls -l
     
@@ -18,12 +18,12 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: section-feed
-        path: feed.json
+        path: author.json
 
     - name: Read/Write data into README
       uses: eddiejaoude/github-actions-reader-writer@v0.1.1
       with:
-        json-file-path: 'feed.json'
+        json-file-path: 'author.json'
         github-token: ${{ secrets.GITHUB_TOKEN }}
         columns: 3
         object-field-names: '[ "title", "image", "link", "pubDate", "guid", "description" ]'
